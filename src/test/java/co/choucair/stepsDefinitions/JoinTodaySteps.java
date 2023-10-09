@@ -4,7 +4,7 @@ import co.choucair.models.FormSignToUtestData;
 import co.choucair.models.LastStepData;
 import co.choucair.questions.RegistrationSuccesfulQuestion;
 import co.choucair.task.*;
-import co.choucair.ui.HomePage;
+import co.choucair.ui.HomeJointTodayPage;
 import co.choucair.utils.BaseConfig;
 import io.cucumber.java.Before;
 import io.cucumber.java.DataTableType;
@@ -51,9 +51,9 @@ public class JoinTodaySteps extends BaseConfig {
 
     @Given("I am on the Utest site")
     public void iAmOnTheUtestSite() {
-        HomePage homePage = new HomePage();
+        HomeJointTodayPage homeJointTodayPage = new HomeJointTodayPage();
         String actorName = "Utest user";
-        theActorCalled(actorName).wasAbleTo(Open.browserOn(homePage));
+        theActorCalled(actorName).wasAbleTo(Open.browserOn(homeJointTodayPage));
     }
 
     @When("I click on the Join Today button")

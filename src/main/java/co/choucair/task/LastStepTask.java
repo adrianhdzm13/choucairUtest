@@ -27,15 +27,16 @@ public class LastStepTask extends BaseConfig implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                PerformWait.wait(3),
+                PerformWait.wait(1),
                 Enter.theValue(data.get(0).getCreateYourUTestpassword()).into(INPUT_PASSWORD),
                 Enter.theValue(data.get(0).getConfirmPassword()).into(INPUT_CONFIRM_PASSWORD),
                 Scroll.to(CHECK_READ_ACCEPT_PRIVACY),
                 Click.on(CHECK_READ_ACCEPT_PRIVACY),
                 Click.on(CHECK_READ_ACCEPT_TERMS),
                 Click.on(BUTTON_COMPLETE_SETUP),
+                PerformWait.wait(2),
                 Scroll.to(TEXT_REGISTRATION),
-                PerformWait.wait(2)
+                PerformWait.wait(1)
         );
         BaseConfig.log.info("Execution of tasks and actions [" + this.getClass().getName() + "]");
     }
