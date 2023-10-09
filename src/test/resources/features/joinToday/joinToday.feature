@@ -16,7 +16,7 @@ Feature: Register
 
     When Enter the following information:
       | firstName           | lastName     | email                   | month    | day | year   |
-      | Adrian              | Hernandez    | adrianhd7880@gmail.com  | December | 13  | 1996   |
+      | Adrian              | Hernandez    | adrianhd789880@gmail.com  | December | 13  | 1996   |
 
     And I click the Next:Devices button
     And I click the Next:Last Step button
