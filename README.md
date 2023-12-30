@@ -1,7 +1,7 @@
 
-# uTest automation
+# Movilidad en Línea automation
 
-Automated testing project created to test new features and quality of uTest product
+Automated testing project created to test new features and quality of Movilidad en Línea product
 
 ## Tech Stack
 

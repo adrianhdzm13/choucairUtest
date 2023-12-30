@@ -10,4 +10,5 @@ public class BaseConfig {
     public BaseConfig(Class className) {
         log = Logger.getLogger(className);
     }
+
 }

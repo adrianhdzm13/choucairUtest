@@ -18,7 +18,6 @@ public class RegistrationSuccesfulQuestion extends BaseConfig {
                 viewedBy(actor).asString().toString().trim();
     }
 
-
-
+    
 }
 

@@ -18,7 +18,7 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 import java.util.List;
 import java.util.Map;
 
-import static co.choucair.utils.Utils.convertUtf8;
+import static co.choucair.utils.Utils.*;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
@@ -51,14 +51,12 @@ public class JoinTodaySteps extends BaseConfig {
 
     @Given("I am on the Utest site")
     public void iAmOnTheUtestSite() {
-        HomeJointTodayPage homeJointTodayPage = new HomeJointTodayPage();
-        String actorName = "Utest user";
-        theActorCalled(actorName).wasAbleTo(Open.browserOn(homeJointTodayPage));
+        OnStage.theActorCalled(ACTOR).wasAbleTo(Open.url(URL));
     }
 
     @When("I click on the Join Today button")
     public void iClickOnTheJoinTodayButton() {
-        theActorInTheSpotlight().attemptsTo(
+        OnStage.theActorInTheSpotlight().attemptsTo(
                 HomeJoinTodayTask.joinTodayTaskTaskInstrumented()
         );
     }
